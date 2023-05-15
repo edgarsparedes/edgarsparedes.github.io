@@ -5,6 +5,27 @@
   </head>
   <body>
     <h1>TEST</h1>
+    <div>
+      <input type="text" id="demo1" />
+    </div>
+    <div>
+      <input type="text" id="demo2" />
+    </div>
+    <div>
+      <input type="text" id="demo3" />
+    </div>
+    
+    <script>
+      $(function() {
+        $('#demo1').maskMoney();
+      });
+      $(function() {
+        $('#demo2').maskMoney();
+      });
+      $(function() {
+        $('#demo3').maskMoney();
+      });
+    </script>
   </body>
 
 </html>
