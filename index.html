@@ -14,7 +14,9 @@
     <div>
       <input type="text" id="demo3" />
     </div>
-    
+    <div>
+        <button type="button" onclick="sumar(); return false;">Click Me!</button>
+    </div>
     <script>
       $(function() {
         $('#demo1').maskMoney();
@@ -25,6 +27,16 @@
       $(function() {
         $('#demo3').maskMoney();
       });
+    
+      function sumar(){
+          var valor1 = Number($('#demo1').maskMoney('unmasked')[0]);
+          var valor2 = Number($('#demo2').maskMoney('unmasked')[0]);
+          var resultado = valor1+valor2;
+          //fijar el resultado visualmente en el campo de ID demo3
+          $('#demo3').maskMoney('mask', resultado);
+          console.log(resultado);
+      }
+
     </script>
   </body>
 
