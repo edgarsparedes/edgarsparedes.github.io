@@ -6,26 +6,26 @@
   <body>
     <h1>TEST</h1>
     <div>
-      <input type="text" id="demo1" />
+      <input type="text" id="demo1" value="0.00" />
     </div>
     <div>
-      <input type="text" id="demo2" />
+      <input type="text" id="demo2" value="0.00"/>
     </div>
     <div>
-      <input type="text" id="demo3" />
+      <input type="text" id="demo3" value="0.00" />
     </div>
     <div>
         <button type="button" onclick="sumar(); return false;">Click Me!</button>
     </div>
     <script>
       $(function() {
-        $('#demo1').maskMoney();
+        $('#demo1').maskMoney({allowZero:true});
       });
       $(function() {
-        $('#demo2').maskMoney();
+        $('#demo2').maskMoney({allowZero:true});
       });
       $(function() {
-        $('#demo3').maskMoney();
+        $('#demo3').maskMoney({allowZero:true});
       });
     
       function sumar(){
