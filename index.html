@@ -18,8 +18,24 @@
         <button type="button" onclick="sumar(); return false;">Click Me!</button>
     </div>
     <script>
+      function fijarCursor(event) {
+        var elemento = event.target;
+        console.log('focusito');
+        var valor = parseFloat(elemento.value);
+        if(event.type==='focus') {
+          if(valor===0) {
+             elemento.setSelectionRange(1,0);
+          } else {
+            elemento.setSelectionRange(0,0);
+          }
+        } else {
+           elemento.setSelectionRange(elemento.selectionStart,0);        
+        }
+      }
       $(function() {
         $('#demo1').maskMoney({allowZero:true});
+        document.getElementById('demo1').addEventListener('click',fijarCursor(evento));
+        document.getElementById('demo1').addEventListener('blur',fijarCursor(evento));
       });
       $(function() {
         $('#demo2').maskMoney({allowZero:true});
