@@ -20,7 +20,7 @@
     <script>
       function fijarCursor(event) {
         var elemento = event.target;
-        console.log('focusito');
+        console.log('event.type='+event.type);
         var valor = parseFloat(elemento.value);
         if(event.type==='focus') {
           if(valor===0) {
