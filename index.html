@@ -33,15 +33,15 @@
         }
       }
       $(function() {
-        $('#demo1').maskMoney({allowZero:true});
+        $('#demo1').maskMoney({allowZero:true, thousands:".", decimal:","});
         document.getElementById('demo1').addEventListener('click',fijarCursor);
         document.getElementById('demo1').addEventListener('focus',fijarCursor);
       });
       $(function() {
-        $('#demo2').maskMoney({allowZero:true});
+        $('#demo2').maskMoney({allowZero:true, thousands:".", decimal:","});
       });
       $(function() {
-        $('#demo3').maskMoney({allowZero:true});
+        $('#demo3').maskMoney({allowZero:true, thousands:".", decimal:","});
       });
     
       function sumar(){
